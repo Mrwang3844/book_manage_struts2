@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 李洋洋
-  Date: 2018/1/6
-  Time: 21:25
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="S" uri="/struts-tags" %>
@@ -38,13 +32,13 @@
                 <tbody>
                 <S:iterator value="#request.books" var="book" >
                     <tr>
-                        <td><s:property value="#book.id"></s:property>
-                        <td><s:property value="#book.name"></s:property>
-                        <td><s:property value="#book.author"></s:property>
-                        <td><s:property value="#book.price"></s:property>
-                        <td><s:property value="#book.comment"></s:property>
+                        <td><s:property value="#book.id"/>
+                        <td><s:property value="#book.name"/>
+                        <td><s:property value="#book.author"/>
+                        <td><s:property value="#book.price"/>
+                        <td><s:property value="#book.comment"/>
                         <td class="success">
-                            <button class="btn btn-primary btn-sm borrow_btn" borrow_id=<s:property value="#book.id"></s:property> >
+                            <button class="btn btn-primary btn-sm borrow_btn" borrow_id=<s:property value="#book.id"/> >
                                 <span class="glyphicon glyphicon-check">归还</span>
                             </button>
                         </td>

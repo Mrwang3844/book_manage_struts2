@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/public.css">
-    <title>个人图书系统页面</title>
+    <title>管理图书系统页面</title>
 </head>
 <body>
 <div class="public-header-warrp">

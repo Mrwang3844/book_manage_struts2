@@ -47,14 +47,14 @@
                     <tbody>
                     <S:iterator value="#request.books" var="book" >
                         <tr>
-                            <td><s:property value="#book.id"></s:property>
-                            <td><s:property value="#book.name"></s:property>
-                            <td><s:property value="#book.author"></s:property>
-                            <td><s:property value="#book.price"></s:property>
-                            <td><s:property value="#book.comment"></s:property>
-                            <td id="borrow_status"><s:property value='#book.stuid == ""? "未借":"已借" '></s:property>
+                            <td><s:property value="#book.id"/>
+                            <td><s:property value="#book.name"/>
+                            <td><s:property value="#book.author"/>
+                            <td><s:property value="#book.price"/>
+                            <td><s:property value="#book.comment"/>
+                            <td id="borrow_status"><s:property value='#book.stuid == ""? "未借":"已借" '/>
                             <td class="success">
-                                <button class="btn btn-primary btn-sm borrow_btn" borrow_id=<s:property value="#book.id"></s:property>>
+                                <button class="btn btn-primary btn-sm borrow_btn" borrow_id=<s:property value="#book.id"/>>
                                     <span class="glyphicon glyphicon-check" >借阅</span>
                                 </button>
                             </td>
@@ -76,9 +76,6 @@
 //        begin:借阅
         $(".borrow_btn").click(function(){
             var book_id = $(this).attr("borrow_id");
-
-            alert(book_count);
-
             this_btn = $(this);
             var book_status = this_btn.parent().prev("#borrow_status").text();
             if($.trim(book_status) === "已借")

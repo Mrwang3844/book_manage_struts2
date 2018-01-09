@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 李洋洋
-  Date: 2018/1/6
-  Time: 21:25
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="S" uri="/struts-tags" %>
@@ -57,7 +51,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-10">
-                        <button type="submit" class="btn btn-primary update_btn">修改</button>
+                        <button type="submit" class="btn btn-primary add_btn">修改</button>
                         <a class="btn btn-link back_btn" href="/book/allBook">返回查询页面</a>
                     </div>
                 </div>
@@ -69,8 +63,8 @@
 <script src="/js/jquery.min.js"></script>
 <script type="text/javascript">
     $(function(){
-        $(".update_btn").click(function(){
-            alert("更新成功!");
+        $(".add_btn").click(function(){
+            alert("修改成功!");
         })
     })
 </script>

@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 李洋洋
-  Date: 2018/1/6
-  Time: 21:25
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="S" uri="/struts-tags" %>
@@ -42,7 +36,6 @@
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputauthor3" name="user.power" value="<s:property value="#request.user.power"/>"  placeholder="权限">
                     </div>
-                    <span style="color: red">"0"代表普通用户,"1"代表管理员</span>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-10">
@@ -59,7 +52,7 @@
 <script type="text/javascript">
     $(function(){
         $(".update_btn").click(function(){
-            alert("修改成功!");
+            alert("更新成功!");
         })
     })
 </script>

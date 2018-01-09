@@ -159,7 +159,7 @@ public class UserAction extends ActionSupport{
         return forward;
     }
 
-    @Action(value = "/delete")
+    @Action(value = "/deleteUser")
     public void delete(){
         int  re = userService.deleteUser(stuId);
         HttpServletResponse response = ServletActionContext.getResponse();

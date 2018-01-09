@@ -62,7 +62,7 @@
 <script type="text/javascript">
     $(function(){
         $(".add_btn").click(function(){
-            alert("添加成功!");
+            alert("增加成功!");
         })
     })
 </script>

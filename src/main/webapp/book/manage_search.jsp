@@ -47,17 +47,17 @@
                     <tbody>
                     <S:iterator value="#request.books" var="book" >
                         <tr>
-                            <td><s:property value="#book.id"></s:property>
-                            <td><s:property value="#book.name"></s:property>
-                            <td><s:property value="#book.author"></s:property>
-                            <td><s:property value="#book.price"></s:property>
-                            <td><s:property value="#book.comment"></s:property>
-                            <td id="borrow_status"><s:property value='#book.stuid == "" ? "未借":"已借" '></s:property>
+                            <td><s:property value="#book.id"/>
+                            <td><s:property value="#book.name"/>
+                            <td><s:property value="#book.author"/>
+                            <td><s:property value="#book.price"/>
+                            <td><s:property value="#book.comment"/>
+                            <td id="borrow_status"><s:property value='#book.stuid == "" ? "未借":"已借" '/>
                             <td class="success">
-                                <button class="btn btn-primary btn-sm update_btn" borrow_id=<s:property value="#book.id"></s:property>>
+                                <button class="btn btn-primary btn-sm update_btn" borrow_id=<s:property value="#book.id"/>>
                                     <span class="glyphicon glyphicon-pencil">修改</span>
                                 </button>
-                                <button class="btn btn-danger btn-sm delete_btn" borrow_id=<s:property value="#book.id"></s:property>>
+                                <button class="btn btn-danger btn-sm delete_btn" borrow_id=<s:property value="#book.id"/>>
                                     <span class="glyphicon glyphicon-remove">删除</span>
                                 </button>
                             </td>
@@ -84,24 +84,22 @@
         $(".delete_btn").click(function(){
             var book_id = $(this).attr("borrow_id");
             this_btn = $(this);
-            if (confirm("确定要删除id为"+book_id+"书吗?")) {
+            if (confirm("确定要删除id为"+book_id+"书吗?"))
                 $.ajax({
-                    url: "book/deleteBook",
-                    type: "POST",
-                    cache:false,
-                    data: {
-                        bookId: book_id
+                    url:"book/deleteBook",
+                    type:"POST",
+                    data:{
+                        bookId:book_id
                     },
-                    success: function (result) {
-                        if (result == 1) {
+                    success:function(result){
+                        if (result == 1){
                             this_btn.parent().parent().remove();
                             alert("删除成功!");
-                        } else
+                        }else
                             alert("删除失败!");
                     }
                 });
-            }
-        });
+        })
         //end
 
 

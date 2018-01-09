@@ -38,15 +38,15 @@
                     <tbody>
                     <S:iterator value="#request.users" var="user" >
                         <tr>
-                            <td><s:property value="#user.stuid"></s:property>
-                            <td><s:property value="#user.password"></s:property>
-                            <td><s:property value="#user.power == 0 ? '普通用户':'管理员'"></s:property>
-                            <td><s:property value="#user.count"></s:property>
+                            <td><s:property value="#user.stuid"/>
+                            <td><s:property value="#user.password"/>
+                            <td><s:property value="#user.power == 0 ? '普通用户':'管理员'"/>
+                            <td><s:property value="#user.count"/>
                             <td class="success">
-                                <button class="btn btn-primary btn-sm update_btn" borrow_id=<s:property value="#user.stuid"></s:property>>
+                                <button class="btn btn-primary btn-sm update_btn" borrow_id=<s:property value="#user.stuid"/>>
                                     <span class="glyphicon glyphicon-pencil">修改权限</span>
                                 </button>
-                                <button class="btn btn-danger btn-sm delete_btn" borrow_id=<s:property value="#user.stuid"></s:property>>
+                                <button class="btn btn-danger btn-sm delete_btn" borrow_id=<s:property value="#user.stuid"/>>
                                     <span class="glyphicon glyphicon-remove">删除用户</span>
                                 </button>
                             </td>
@@ -75,13 +75,13 @@
             this_btn = $(this);
             if (confirm("确定要删除账号为"+user_id+"用户吗?"))
                 $.ajax({
-                    url:"user/delete",
+                    url:"user/deleteUser",
                     type:"POST",
                     data:{
                         stuId:user_id
                     },
                     success:function(result){
-                        if (result == 1){
+                        if (result === "1"){
                             this_btn.parent().parent().remove();
                             alert("删除成功!");
                         }else
