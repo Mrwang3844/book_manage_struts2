@@ -58,6 +58,23 @@
     </dependency>
     <!--====end-->
 
+    <!--====begin:c3p0依赖包-->
+    <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+    <dependency>
+      <groupId>com.mchange</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.5.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.1.2</version>
+    </dependency>
+
+    <!--====end-->
+
+
     <!--&lt;!&ndash;====begin:配置HikariCP数据库连接池====&ndash;&gt;-->
     <!--<dependency>-->
       <!--<groupId>com.zaxxer</groupId>-->

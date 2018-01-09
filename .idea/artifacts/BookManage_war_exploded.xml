@@ -20,6 +20,9 @@
           <element id="library" level="project" name="Maven: org.ow2.asm:asm-commons:5.2" />
           <element id="library" level="project" name="Maven: org.ow2.asm:asm-tree:5.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:6.0.6" />
+          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
+          <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.11" />
+          <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
