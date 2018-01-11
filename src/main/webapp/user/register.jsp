@@ -39,17 +39,16 @@
 <script src="../js/jquery.min.js"></script>
 <script type="text/javascript">
     $(function(){
-        $(".btn__sub").click(function(){
+        $(".btn_sub").click(function(){
             var pass1 = $(".pass1").val();
             var pass2 = $(".pass2").val();
-            alert(pass1 + "  " + pass2);
-            if (pass1.eq(pass2)) {
+            if (pass1 === pass2) {
                 alert("注册成功!转到登录界面");
                 return true;
             } else {
                 alert("两次输入密码不一致,请重新输入!");
-                $(".pass1").text("");
-                $(".pass2").text("");
+                $(".pass1").val("");
+                $(".pass2").val("");
                 return false;
             }
         })

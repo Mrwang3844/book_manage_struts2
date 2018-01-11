@@ -172,7 +172,7 @@ public class BookDao {
         String sql = "update book set bstuid=? where bid = ?";
         try {
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, null);
+            pstmt.setInt(1, 0);
             pstmt.setInt(2, bookId);
             row = pstmt.executeUpdate();
         } catch (SQLException e) {

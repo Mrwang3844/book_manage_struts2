@@ -41,7 +41,6 @@ public class UserDao {
         }
         return user2;
     }
-
     // / 查询所有的用户信息
     public List<User> selectAllUser() {
         Connection con = null;
@@ -69,7 +68,6 @@ public class UserDao {
         }
         return users;
     }
-
     // 获得单个用户信息
     public User  selectOneUser(String stuid) {
         Connection con = null;
@@ -95,8 +93,6 @@ public class UserDao {
         }
         return user;
     }
-
-
     // / 模糊查询用户信息
     public List<User>  selectUserLike(String stuid) {
         Connection con = null;
@@ -168,7 +164,6 @@ public class UserDao {
         }
         return row;
     }
-
     // 修改用户借阅数量
     public int updateCount(int stuid,int num) {
         Connection con = null;
