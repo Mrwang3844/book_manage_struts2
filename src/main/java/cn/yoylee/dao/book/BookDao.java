@@ -15,9 +15,6 @@ import java.util.List;
 import static cn.yoylee.util.BookConstants.USER_SESSION;
 
 public class BookDao {
-
-
-
     // 获得所有的图书信息
     public List<Book>  selectAllBook() {
         Connection con = null;
@@ -34,10 +31,10 @@ public class BookDao {
                 book = new Book();
                 book.setId(rs.getInt("bid"));
                 book.setName(rs.getString("bname"));
-                book.setAuthor(rs.getString("bauthor"));
                 book.setPrice(rs.getDouble("bprice"));
-                book.setComment(rs.getString("bcomment"));
                 book.setStuid(rs.getInt("bstuid"));
+                book.setComment(rs.getString("bcomment"));
+                book.setAuthor(rs.getString("bauthor"));
                 books.add(book);
             }
         } catch (Exception e) {

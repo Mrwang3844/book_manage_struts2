@@ -7,7 +7,6 @@ import java.util.List;
 
 public class BookService {
 
-
     BookDao bookDao = new BookDao();
 
     public List<Book> getAllBook(){

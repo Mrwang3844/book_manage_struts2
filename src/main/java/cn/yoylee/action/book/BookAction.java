@@ -24,7 +24,6 @@ import static cn.yoylee.util.BookConstants.USER_SESSION;
 @Namespace(value = "/book")
 public class BookAction extends ActionSupport{
 
-
     Book book;
     int bookId;
     String name;
@@ -34,7 +33,6 @@ public class BookAction extends ActionSupport{
     HttpServletResponse response = ServletActionContext.getResponse();
     Map session =ActionContext.getContext().getSession();
     User user = (User)session.get(USER_SESSION);
-
 
     @Action(
             value = "/allBook",
